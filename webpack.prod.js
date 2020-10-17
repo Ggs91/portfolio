@@ -24,7 +24,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, 'src/assets/stylesheets'),
+        include: path.resolve(__dirname, 'src/assets/stylesheets/css'),
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -45,7 +45,7 @@ module.exports = merge(common, {
       },
       {
         test: /\.s[ac]ss$/i,
-        include: path.resolve(__dirname, 'src/assets/stylesheets'),
+        include: path.resolve(__dirname, 'src/assets/stylesheets/scss'),
         use: [
           MiniCssExtractPlugin.loader,
           {

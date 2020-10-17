@@ -22,7 +22,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, 'src/assets/stylesheets'),
+        include: path.resolve(__dirname, 'src/assets/stylesheets/css$'),
         use: [
           { loader: 'style-loader' },
           {
@@ -33,7 +33,7 @@ module.exports = merge(common, {
       },
       {
         test: /\.s[ac]ss$/i,
-        include: path.resolve(__dirname, 'src/assets/stylesheets'),
+        include: path.resolve(__dirname, 'src/assets/stylesheets/scss'),
         use: [
           { loader: 'style-loader' },
           {

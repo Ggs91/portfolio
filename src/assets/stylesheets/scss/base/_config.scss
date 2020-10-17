@@ -1,0 +1,34 @@
+// Variables
+$secondary-color: #1a7cd9;
+$grey: #878a8f;
+$show-home-image: true;
+// $hero-image: url("../../images/georgesatalla.jpg");
+$background-opacity: 0.9;
+
+
+// Custom Style
+
+body {
+  // @include background;
+  height: 100%;
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, "Lato", "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+//Headings
+
+h1,
+h2,
+h3 {
+
+}
+
+//links
+a {
+  // color: #fff;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
