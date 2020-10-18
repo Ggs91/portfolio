@@ -1,8 +1,11 @@
 // Variables
-$secondary-color: #1a7cd9;
+// $primary-color: #1a7cd9;
+$primary-color: #1179B7;
+
 $grey: #878a8f;
 $show-home-image: true;
-// $hero-image: url("../../images/georgesatalla.jpg");
+$hero-image: url("../../images/georgesatalla.jpg");
+$portrait-image: url("../../images/georgesatalla.jpg");
 $background-opacity: 0.9;
 
 
@@ -17,10 +20,10 @@ body {
 
 //Headings
 
-h1,
-h2,
-h3 {
-
+h1 {
+  font-size: 2rem;
+  line-height: 2;
+  padding-bottom: 3rem;
 }
 
 //links
@@ -30,5 +33,5 @@ a {
 }
 
 .text-secondary {
-  color: $secondary-color;
+  color: $primary-color;
 }

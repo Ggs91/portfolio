@@ -13,11 +13,10 @@
 
   <header class="primary-header">
 
-    <a href="/">
-      <h1><span class="text-secondary">Georges Atalla</span>
-        <span>Full Stack Developer</span>
-      </h1>
-    </a>
+    <h1 id="branding">
+      <a href="/"><span class="text-secondary">Georges Atalla</span>
+      <span>Full Stack Developer</span></a>
+    </h1>
 
     <div class="menu-btn">
       <div class="btn-line"></div>
@@ -25,33 +24,40 @@
       <div class="btn-line"></div>
     </div>
 
-    <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait"></div>
-      </div>
-      <ul class="menu-nav">
-        <li class="nav-item">
-          <a href="/" class="nav-link">
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#my-work" class="nav-link">
-            My Work
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#about" class="nav-link">
-            About Me
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#primary-footer" class="nav-link">
-            Contact Me
-          </a>
-        </li>
-      </ul>
-    </nav>
+
+    <div class="menu">
+
+      <div class="menu-panel-left"></div>
+
+      <div class="menu-panel-right"></div>
+
+      <nav>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#my-work" class="nav-link">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">
+              About Me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#primary-footer" class="nav-link">
+              Contact Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
   </header>
 
   <!-- Main -->
@@ -59,27 +65,87 @@
   <main>
 
     <!-- Hero -->
-
     <section id="hero">
+      <img class="hero-bg" src="assets/images/georgesatalla.jpg" alt="Georges ATALLA">
       <div class="hero-content">
         <div class="hero-text">
           <h1>Hello, I'm <span class="text-secondary">Georges Atalla</span>.</h1>
           <h2>I'm a full-stack web developer.</h2>
         </div>
-        <a href="#my-work" class="hero-btn">Check My Work</a>
+        <a href="#my-work" class="btn hero-btn">View My Work</a>
       </div>
     </section>
 
     <!-- My Work -->
 
     <section id="my-work">
+      <div class="container">
+        <h1>Projects</h1>
+        <section class="projects">
 
+
+
+
+          <article class="card">
+            <div class="card-img-wrapper">
+              <img class="card-img" src="assets/images/sharemyhobby.png" alt="sharmyhobby">
+            </div>
+
+            <div class="card-overlay">
+              <h3>Learning outcomes:</h3>
+              <img class="close-details" src="assets/icons/close.png" alt="close details icon">
+              <ul>
+                <li>zrghehh</li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+
+            <div class="card-details">
+              <h2 class="card-title">SharMyHobby</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, esse.</p>
+            </div>
+          </article>
+
+
+
+
+          <article class="card">
+            <div class="card-img-wrapper">
+              <img class="card-img" src="assets/images/sharemyhobby.png" alt="sharmyhobby">
+            </div>
+
+            <div class="card-overlay">
+              <h3>Learning outcomes:</h3>
+              <img class="close-details" src="assets/icons/close.png" alt="close details icon">
+              <ul>
+                <li>zrghehh</li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+
+            <div class="card-details">
+              <h2 class="card-title">SharMyHobby</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, esse.</p>
+            </div>
+          </article>
+
+
+
+
+
+        </section>
+      </div>
     </section>
 
     <!-- About-->
 
     <section id="about">
+      <div class="container">
+        <h1>About Me</h1>
 
+      </div>
     </section>
 
   </main>
@@ -87,7 +153,9 @@
   <!-- Primary Footer -->
 
   <footer id="primary-footer">
-
+    <div class="container">
+      <h1>Contact Me</h1>
+    </div>
   </footer>
 </body>
 </html>

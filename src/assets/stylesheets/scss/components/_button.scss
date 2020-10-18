@@ -1,0 +1,23 @@
+// .btn
+button {
+  display: inline-block;
+  color:$primary-color;
+  background:#fff;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  // padding: 0.7rem 3rem;
+  // font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  // box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  // text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  color: #fff;
+  background:$primary-color;
+
+}
