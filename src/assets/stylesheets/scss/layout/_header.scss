@@ -13,11 +13,12 @@ header {
 #branding {
   position: absolute;
   display: block;
-  z-index: 3;
   left: 2rem;
   top: 2rem;
   cursor: pointer;
+  padding:0;
   // text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.  5);
+  // z-index: 1  ; quand y'a la navbar
 }
 
 #branding h1 {
