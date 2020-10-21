@@ -14,21 +14,25 @@ $background-opacity: 0.9;
 body {
   // @include background;
   height: 100%;
-  font-family: 'Roboto', "Helvetica Neue", Helvetica, "Lato", "Open Sans", Arial, sans-serif;
+  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, "Lato", "Open Sans", Arial, sans-serif;
   line-height: 1.2;
+  font-weight: 400;
 }
 
 //Headings
 
-h1 {
-  font-size: 2rem;
+
+h1.section-heading {
+  @include underly(#000);
+  font-size: 3rem;
   line-height: 2;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
 }
 
 //links
 a {
-  // color: #fff;
+  color: #000;
   text-decoration: none;
 }
 

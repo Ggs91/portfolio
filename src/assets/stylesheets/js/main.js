@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const menuPanelRight = document.querySelector('.menu-panel-right');
   const menuPanelLeft = document.querySelector('.menu-panel-left');
   const navItems = document.querySelectorAll('.nav-item');
+  const buttonLines = document.querySelectorAll('.btn-line');
 
   // Set Initial State Of Menu
   let showMenu = false;
@@ -27,8 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
       menuPanelRight.classList.remove('close'); /////
       menuPanelLeft.classList.add('show');
       menuPanelLeft.classList.remove('close'); /////
-
       navItems.forEach(item => item.classList.add('show'));
+      buttonLines.forEach(item => item.classList.add('show'));
+      buttonLines.forEach(item => item.classList.remove('close'));
 
       // Set Menu State
       showMenu = true;
@@ -40,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
       menuPanelLeft.classList.remove('show');
       menuPanelLeft.classList.add('close'); /////
       navItems.forEach(item => item.classList.remove('show'));
+      buttonLines.forEach(item => item.classList.remove('show'));
+      buttonLines.forEach(item => item.classList.add('close'));
 
       // Set Menu State
       showMenu = false;
@@ -60,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+
+
 // Parallax Effect Hero Section
 window.addEventListener("DOMContentLoaded", scrollLoop, false);
 
@@ -68,7 +74,7 @@ var heroBG = document.getElementsByClassName("hero-bg")[0];
 function scrollLoop(e) {// requestAnimation frame fait this function fction 60fps. 60 times per sec setTranslate is called and it update transform3D of the img, and so its position
   xScrollPosition = window.scrollX; //We don't use the scroll event to get the position for perfs reasons, instead we ask for x & y position 60 times per sec
   yScrollPosition = window.scrollY;
-  setTranslate(0, yScrollPosition * 0.3, heroBG);
+  setTranslate(0, yScrollPosition * -0.3, heroBG);
   requestAnimationFrame(scrollLoop);
 }
 

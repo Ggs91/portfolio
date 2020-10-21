@@ -2,7 +2,6 @@
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  letter-spacing: 0.1rem;
 }
 
 .btn-primary {
@@ -25,6 +24,7 @@
 
 .btn-rounded {
   position: relative;
+  display: inline-block;
   height: 3.7rem;
   width: 3.7rem;
   border-radius: 100%;

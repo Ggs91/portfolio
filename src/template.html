@@ -5,29 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Georges Atalla</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap" rel="stylesheet"> -->
   <script src="https://kit.fontawesome.com/121d1195fa.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Primary Header -->
 
   <header class="primary-header">
+    <div class="flex-wrapper">
 
-    <h1 id="branding">
-      <a href="/"><span class="text-secondary">Georges Atalla</span>
-      <span>Full Stack Developer</span></a>
-    </h1>
+      <!-- Logo -->
 
-    <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
+      <h1 id="branding">
+        <a href="/">
+          Georges Atalla<span>Full Stack Developer</span>
+        </a>
+      </h1>
+
+      <!-- Menu buton -->
+
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
     </div>
 
+    <!-- Menu -->
 
     <div class="menu">
+
+    <!-- Overlay menu panels -->
 
       <div class="menu-panel-left"></div>
 
@@ -47,19 +56,17 @@
           </li>
           <li class="nav-item">
             <a href="#about" class="nav-link">
-              About Me
+              About
             </a>
           </li>
           <li class="nav-item">
             <a href="#primary-footer" class="nav-link">
-              Contact Me
+              Contact
             </a>
           </li>
         </ul>
       </nav>
-
     </div>
-
   </header>
 
   <!-- Main -->
@@ -67,56 +74,63 @@
   <main>
 
     <!-- Hero -->
+
     <section id="hero">
-      <img class="hero-bg" src="assets/images/georgesatalla.jpg" alt="Georges ATALLA">
-      <div class="hero-content">
+      <div class="hero-bg"></div>
+      <!-- <img class="hero-bg" src="assets/images/test2.png" alt="Georges ATALLA"> -->
+      <img class="guy" src="assets/images/georgesatallar.jpg" alt="Georges ATALLA">
+
+      <!-- <div class="hero-content">
         <div class="hero-text">
           <h1>Hello, I'm <span class="text-secondary">Georges Atalla</span>.</h1>
           <h2>I'm a full-stack web developer.</h2>
         </div>
         <a href="#my-work" class="btn hero-btn">View My Work</a>
-      </div>
+      </div> -->
     </section>
 
     <!-- My Work -->
 
     <section id="my-work">
       <div class="container">
-        <h1>Projects</h1>
         <section class="projects">
+          <h1 class="section-heading">Projects</h1>
+          <div class="content-wrapper">
 
 
 
 
-          <article class="card">
-            <div class="card-img-wrapper">
-              <img class="card-img" src="assets/images/sharemyhobby.png" alt="sharemyhobby">
-            </div>
-
-            <div class="card-overlay">
-              <div class="overlay-top">
-                <h3><span class="text-secondary">Learning outcomes</span>:</h3>
-                <i class="close-overlay fas fa-times"></i>
-                <!-- <img class="close-overlay" src="assets/icons/close.png" alt="close card details icon"> -->
+            <article class="card">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="assets/images/sharemyhobby.png" alt="sharemyhobby">
               </div>
-              <ul>
-                <li><strong>Ruby on Rails</strong> backend</li>
-                <li>Bulma CSS frontend.</li>
-                <li>String interpolation via recursion</li>
-                <li>Dependency free JS config</li>
-              </ul>
-              <div class="card-buttons">
-                <a class="btn-rounded" href="#"><i class="fab fa-youtube"></i></a>
-                <a class="btn-rounded" href="#"><i class="fas fa-eye"></i></a>
-                <a class="btn-rounded" href="#"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
 
-            <div class="card-details">
-              <h2 class="card-title">ShareMyHobby</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, esse.</p>
-            </div>
-          </article>
+              <div class="card-overlay">
+                <div class="overlay-top">
+                  <h3><span class="text-secondary">Learning outcomes</span>:</h3>
+                  <i class="close-overlay fas fa-times"></i>
+                  <!-- <img class="close-overlay" src="assets/icons/close.png" alt="close card details icon"> -->
+                </div>
+                <ul>
+                  <li><strong>Ruby on Rails</strong> backend</li>
+                  <li>Bulma CSS frontend.</li>
+                  <li>String interpolation via recursion</li>
+                  <li>Dependency free JS config</li>
+                </ul>
+                <div class="card-buttons">
+                  <a class="btn-rounded" target="_blank" href="#"><i class="fab fa-youtube"></i></a>
+                  <a class="btn-rounded" target="_blank" href="#"><i class="fas fa-eye"></i></a>
+                  <a class="btn-rounded" target="_blank" href="https://github.com/Ggs91/"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+
+              <div class="card-details">
+                <h2 class="card-title">ShareMyHobby</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, esse.</p>
+              </div>
+            </article>
+
+          </div>
 
 
 
@@ -132,8 +146,10 @@
 
     <section id="about">
       <div class="container">
-        <h1>About Me</h1>
+        <h1 class="section-heading">About</h1>
+        <div class="content-wrapper">
 
+        </div>
       </div>
     </section>
 
@@ -143,7 +159,23 @@
 
   <footer id="primary-footer">
     <div class="container">
-      <h1>Contact Me</h1>
+      <h1 class="section-heading">Contact</h1>
+      <div class="content-wrapper">
+        <ul>
+          <li>
+            <a class="btn-rounded" href="mailto:georges_atalla@hotmail.fr"><i class="fas fa-envelope"></i></a> <a href="mailto:georges_atalla@hotmail.fr">georges_atalla@hotmail.fr</a>
+          </li>
+          <li>
+            <a class="btn-rounded"><i class="fas fa-phone-alt"></i></a> <span>+33 (0)6.80.81.93.40</span>
+          </li>
+          <li>
+            <a class="btn-rounded" target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a> <a  target="_blank" href="https://github.com/Ggs91/">https://github.com/Ggs91/</a>
+          </li>
+          <li>
+            <a class="btn-rounded" target="_blank" href="https://github.com/Ggs91/"><i class="fab fa-github"></i></a> <a  target="_blank" href="https://github.com/Ggs91/">https://github.com/Ggs91/</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>

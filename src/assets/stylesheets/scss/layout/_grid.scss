@@ -1,6 +1,6 @@
 //Container
 .container {
-  max-width: 1500px;
+  max-width: 1700px;
   padding:0 90px;
   margin: 0 auto;
   @include breakpoint(tablet-portrait) {
@@ -16,4 +16,8 @@
   @include breakpoint(very-small-screen) {
     max-width: 300px;
   }
+}
+
+.content-wrapper {
+  padding: 0 4rem;
 }
