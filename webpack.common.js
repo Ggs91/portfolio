@@ -11,12 +11,22 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: [
-          "html-loader",
-        ]
+        loader: 'html-loader',
+        options: {
+          attributes: {
+            list: [
+              '...',
+              {
+                tag: 'a',
+                attribute: 'href',
+                type: 'src'
+              }
+            ]
+          }
+        }
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|pdf)$/,
         use: {
           loader: "file-loader",
           options: {
