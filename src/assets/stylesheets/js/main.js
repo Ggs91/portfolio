@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
   var xScrollPosition;
   var yScrollPosition;
 
+//   const work = document.querySelector('.work');
+//
+// work.addEventListener("click", hidePanels);
+//
+// function hidePanels() {
+//   // menuPanelRight.style.visibility="hidden";
+// }
   // Menu Toggle
   const menuBtn = document.querySelector('.menu-btn');
   const menu = document.querySelector('.menu');
@@ -21,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
   menuBtn.addEventListener('click', toggleMenu);
 
   function toggleMenu() {
-    if (!showMenu) {
+    if (!showMenu) { //ce qui se passe quand on ouvre le menu
       menuBtn.classList.add('close');
       menu.classList.add('show');
       menuPanelRight.classList.add('show');

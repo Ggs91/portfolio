@@ -58,10 +58,13 @@ html{
   box-sizing: inherit;
 }
 
-strong {
-  font-weight: 500;
+strong,
+b {
+  font-weight: 600;
 }
-
+cite {
+  text-decoration: underline;
+}
 cite,
 em {
   font-style: italic;

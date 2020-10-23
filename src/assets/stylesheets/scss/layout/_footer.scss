@@ -4,3 +4,33 @@
   background:#f8f8f8;
   border-top: 1px solid #f1f1f1;
 }
+
+#primary-footer {
+  a {
+    vertical-align: middle;
+    border: none;
+  }
+  ul {
+    // margin-left: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  li {
+    flex:50%;
+    font-size: 1.2rem;
+    // flex:100%; sur mobile
+    margin-bottom: 2rem;
+    a:nth-child(2),
+    span {
+      text-decoration: none;
+      margin-left: 1rem;
+      &:hover {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+}

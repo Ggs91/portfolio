@@ -7,7 +7,7 @@ $show-home-image: true;
 $hero-image: url("../../images/georgesatalla.jpg");
 $portrait-image: url("../../images/georgesatalla.jpg");
 $background-opacity: 0.9;
-
+$text-secondary: #484848;
 
 // Custom Style
 
@@ -30,10 +30,31 @@ h1.section-heading {
   font-weight: 600;
 }
 
+h2 {
+  color: $primary-color;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h5 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color:$text-secondary;
+  margin-bottom: 1rem;
+}
+
 //links
 a {
   color: #000;
   text-decoration: none;
+  border-bottom: 1px solid black;
 }
 
 .text-secondary {
