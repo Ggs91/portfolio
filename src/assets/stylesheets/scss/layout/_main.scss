@@ -28,12 +28,6 @@
   }
 }
 
-// Paddings
-main > section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
                     // HERO
 #hero {
   box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.45);
@@ -85,9 +79,6 @@ main > section {
     color:$primary-color;
   }
 
-  p {
-    border: none;
-  }
 }
                  // EDUCATION & SKILL
 #education {
@@ -113,8 +104,11 @@ main > section {
   }
 
   li {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0 0 10px 0;
+    @include breakpoint(phone-portrait) {
+      font-size: 1.2rem;
+    }
   }
 }
 

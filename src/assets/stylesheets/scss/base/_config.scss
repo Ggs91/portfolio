@@ -1,5 +1,5 @@
 // Variables
-// $primary-color: #1a7cd9;
+
 $primary-color: #1179B7;
 
 $grey: #878a8f;
@@ -28,6 +28,15 @@ h1.section-heading {
   line-height: 2;
   margin-bottom: 3rem;
   font-weight: 600;
+  @include breakpoint(tablet-portrait) {
+    text-align: center;
+    transform: translate3d(-50%, 0, 0);
+    left: 50%;
+    right:50%;
+  }
+  @include breakpoint(phone-portrait) {
+    font-size:2.7rem;
+  }
 }
 
 h2 {
@@ -35,6 +44,9 @@ h2 {
   font-size: 1.7rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  @include breakpoint(phone-portrait) {
+    font-size:1.5rem;
+  }
 }
 
 h5 {
@@ -44,7 +56,7 @@ h5 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   color:$text-secondary;
   margin-bottom: 1rem;

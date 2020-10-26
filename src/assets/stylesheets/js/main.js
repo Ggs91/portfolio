@@ -7,13 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var xScrollPosition;
   var yScrollPosition;
 
-//   const work = document.querySelector('.work');
-//
-// work.addEventListener("click", hidePanels);
-//
-// function hidePanels() {
-//   // menuPanelRight.style.visibility="hidden";
-// }
   // Menu Toggle
   const menuBtn = document.querySelector('.menu-btn');
   const menu = document.querySelector('.menu');
@@ -26,6 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
   let showMenu = false;
 
   menuBtn.addEventListener('click', toggleMenu);
+  navItems.forEach(item => item.addEventListener('click', toggleMenu));
+
+  // function markCurrentSection(menuOpen) {
+  //   //get anchor name of the current section ID
+  //   const currentSectionId = window.location.hash;
+  //   //Select the anchor link in the menu with the current value for its href attribute
+  //   const currentAnchor = document.querySelector(`a[href="${currentSectionId}"]`);
+  //   //Add to it a class of current to style it
+  //   menuOpen ? currentAnchor.classList.add("current") : currentAnchor.classList.remove("current");
+  // }
 
   function toggleMenu() {
     if (!showMenu) { //ce qui se passe quand on ouvre le menu
@@ -55,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Set Menu State
       showMenu = false;
     }
+    // markCurrentSection(showMenu)
   }
 
 //Card Overlay
@@ -71,14 +75,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
+//Jump to a position a little above of the anchor link to avoir the header to overlap the section's title
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 40);
+});
 
 // Parallax Effect Hero Section
 window.addEventListener("DOMContentLoaded", scrollLoop, false);
 
-var heroBG = document.getElementsByClassName("hero-bg")[0];
+var heroBG = document.querySelector(".hero-bg");
 
-function scrollLoop(e) {// requestAnimation frame fait this function fction 60fps. 60 times per sec setTranslate is called and it update transform3D of the img, and so its position
+function scrollLoop(e) {// requestAnimation frame run this function with 60fps. 60 times per sec setTranslate is called and it update transform3D of the img, and so its position
   xScrollPosition = window.scrollX; //We don't use the scroll event to get the position for perfs reasons, instead we ask for x & y position 60 times per sec
   yScrollPosition = window.scrollY;
   setTranslate(0, yScrollPosition * -0.3, heroBG);

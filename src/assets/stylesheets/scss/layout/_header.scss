@@ -3,36 +3,80 @@ header {
   top:0;
   left:0;
   width:100%;
-  background-color: rgba(0, 0, 0, 0);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 2;
-  .flex-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 2rem;
+  // border:5px solid black;
+  @include breakpoint(tablet-portrait) {
+    height:5rem;
+    background-color:#fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    // background-color:rgba(255,255,255,.95);
+  }
+
+  @include breakpoint(phone-portrait) {
+    height:4.5rem;
+
+  }
+  @include breakpoint(very-small-screen) {
+    height:4rem;
+
   }
 }
 
  // Branding
 #branding {
+  @include easeOut;
   font-size: 1.6rem;
   line-height: 1.4;
   font-weight: 600;
-  // letter-spacing: -0.05rem;
+  position: absolute;
+  top: 35px;
+  left: 35px;
   cursor: pointer;
   padding:0;
   margin:0;
+  a {
+    border: none;
+  }
   span {
     letter-spacing: 0.15rem;
     display: block;
     font-weight: 200;
     font-size: 1rem;
     text-transform: uppercase;
+    @include breakpoint(phone-portrait) {
+      font-size: 0.8rem;
+      letter-spacing: 0.11rem;
+    }
+    @include breakpoint(very-small-screen) {
+      font-size: 0.7rem;
+    }
   }
-  a {
-    border: none;
+  @include breakpoint(tablet-portrait) {
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
   }
-  // text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.  5);
-  // z-index: 1  ; quand y'a la navbar
+  @include breakpoint(phone-portrait) {
+    font-size: 1.4rem;
+  }
+
+  @include breakpoint(very-small-screen) {
+    font-size: 1.2rem;
+  }
+}
+
+.menu-btn {
+  font-weight: 600;
+  position: absolute;
+  top:50px;
+  right: 30px;
+  @include breakpoint(tablet-portrait) {
+    top:27px;
+    right: 35px;
+  }
+  @include breakpoint(very-small-screen) {
+    top: 22px;
+  }
 }
