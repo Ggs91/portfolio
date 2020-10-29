@@ -28,10 +28,10 @@
 // Paddings
 main > section {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
   @include breakpoint(phone-portrait) {
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
   }
 }
 
