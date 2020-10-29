@@ -1,11 +1,7 @@
 @mixin underly($color) {
   display: inline-block;
   position: relative;
-  // @include breakpoint(tablet-portrait) {
-  //   transform: translate(-50%, 0);
-  //   left: 50%;
-  //   right:50%;
-  // }
+
   &:after {
     content: '';
     position: absolute;

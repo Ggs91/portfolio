@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-  //Setting requestAnimationFrame
+
+////////////////////// Setting requestAnimationFrame //////////////////////
+
   var requestAnimationFrame = window.requestAnimationFrame ||
   window.mozRequestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
   window.msRequestAnimationFrame;
-  var xScrollPosition;
-  var yScrollPosition;
 
-  // Menu Toggle
+////////////////////// Menu Toggle //////////////////////
+
   const menuBtn = document.querySelector('.menu-btn');
   const menu = document.querySelector('.menu');
   const menuPanelRight = document.querySelector('.menu-panel-right');
@@ -21,14 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
   menuBtn.addEventListener('click', toggleMenu);
   navItems.forEach(item => item.addEventListener('click', toggleMenu));
 
-  // function markCurrentSection(menuOpen) {
-  //   //get anchor name of the current section ID
-  //   const currentSectionId = window.location.hash;
-  //   //Select the anchor link in the menu with the current value for its href attribute
-  //   const currentAnchor = document.querySelector(`a[href="${currentSectionId}"]`);
-  //   //Add to it a class of current to style it
-  //   menuOpen ? currentAnchor.classList.add("current") : currentAnchor.classList.remove("current");
-  // }
 
   function toggleMenu() {
     if (!showMenu) { //ce qui se passe quand on ouvre le menu
@@ -61,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // markCurrentSection(showMenu)
   }
 
-//Card Overlay
+//////////////////////  Card Overlay ////////////////////// 
 
   const cardOverlays = document.querySelectorAll('.card-overlay');
   const cardImageWrappers = document.querySelectorAll(".card-img-wrapper");
@@ -80,8 +73,12 @@ window.addEventListener("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 40);
 });
 
-// Parallax Effect Hero Section
+////////////////////// Parallax Effect Hero Section //////////////////////
+
 window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+var xScrollPosition;
+var yScrollPosition;
 
 const hero = document.getElementById("hero");
 const heroBG = document.querySelector(".hero-bg");
@@ -109,3 +106,50 @@ function isVisible (ele) {
     (top > 0 || bottom > 0) &&
     top < vHeight);
 }
+
+////////////////////// Observers //////////////////////
+
+const header = document.querySelector(".primary-header");
+
+// Hero Section Observer
+const heroSection = document.querySelector("section#hero");
+const heroSectionOptions = {
+  root: null,
+  rootMargin: "-6% 0px 0px 0px"
+};
+
+const heroSectionObserver = new IntersectionObserver(function(entries, heroSectionObserver) {
+  entries.forEach(entry => {
+    console.log(entry);
+    if (!entry.isIntersecting) {
+      header.classList.add("inverse");
+    } else {
+      header.classList.remove("inverse");
+    }
+  });
+
+}, heroSectionOptions)
+
+heroSectionObserver.observe(heroSection)
+
+// Footer Observer
+
+const footer = document.getElementById("primary-footer");
+
+const footerOptions = {
+  root: null,
+  rootMargin: "0px 0px -94% 0px"
+};
+
+const footerObserver = new IntersectionObserver(function(entries, footerObserver) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      header.classList.add("inverse");
+    } else {
+      header.classList.remove("inverse");
+    }
+  });
+
+}, footerOptions)
+
+footerObserver.observe(footer)
