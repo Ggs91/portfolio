@@ -40,7 +40,7 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
-              disable: !dev,
+              disable: dev,
               // bypassOnDebug: true,
               mozjpeg: {
                 progressive: true,
