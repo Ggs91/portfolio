@@ -1,46 +1,24 @@
-////////////////////// Observers //////////////////////
-
-const header = document.querySelector(".primary-header");
-
-// Hero Section Observer
-const heroSection = document.querySelector("section#hero");
-const heroSectionOptions = {
-  root: null,
-  rootMargin: "-6% 0px 0px 0px"
+const faders = document.querySelectorAll('.fade-in');
+const sliders = document.querySelectorAll('.slide-in');
+const appearOptions = {
+  threshold: 1, //appear only once entierly in the viewport
+  // rootMargin: "0px 0px -100px 0px"
 };
-
-const heroSectionObserver = new IntersectionObserver(function(entries, heroSectionObserver) {
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
   entries.forEach(entry => {
-    console.log(entry);
-    if (!entry.isIntersecting) {
-      header.classList.add("inverse");
+    if(!entry.isIntersecting) {
+      return;
     } else {
-      header.classList.remove("inverse");
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
     }
   });
+}, appearOptions)
 
-}, heroSectionOptions)
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
 
-heroSectionObserver.observe(heroSection)
-
-// Footer Observer
-
-const footer = document.getElementById("primary-footer");
-
-const footerOptions = {
-  root: null,
-  rootMargin: "0px 0px -94% 0px"
-};
-
-const footerObserver = new IntersectionObserver(function(entries, footerObserver) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      header.classList.add("inverse");
-    } else {
-      header.classList.remove("inverse");
-    }
-  });
-
-}, footerOptions)
-
-footerObserver.observe(footer)
+sliders.forEach(slider => {
+  appearOnScroll.observe(slider);
+});

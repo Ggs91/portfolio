@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
+  // devtool: dev ? "eval-source-map": "source-map",
   module: {
     rules: [
       {

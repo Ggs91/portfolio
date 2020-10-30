@@ -1,5 +1,6 @@
 import menuToggle from './menuToggle.js'
 import parallaxEffect from './parallaxEffect.js'
 import cardOverlay from './cardOverlay.js'
-import observers from './observers.js'
+import headerInverse from './headerInverse.js'
 import shiftAnchorJump from './shiftAnchorJump.js'
+import observers from './observers.js'
