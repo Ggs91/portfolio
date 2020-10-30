@@ -75,8 +75,8 @@
     max-width: 600px;
     margin: 0 auto;
   }
-  input[type="text"],
-  input[type="email"],
+  input[name="name"],
+  input[name="email"],
   textarea {
     background: #1E1E1E;
     font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, "Lato", "Open Sans", Arial, sans-serif;
