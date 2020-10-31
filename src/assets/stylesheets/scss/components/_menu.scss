@@ -5,14 +5,14 @@
   cursor: pointer;
   font-weight: 600;
   position: absolute;
-  top:50px;
+  top: 50px;
   right: 30px;
   @include breakpoint(tablet-portrait) {
-    top:27px;
-    right: 35px;
+    top: 21px;
+    right: 25px;
   }
   @include breakpoint(very-small-screen) {
-    top: 22px;
+    top: 16px;
   }
 
   .btn-line {
@@ -118,8 +118,8 @@
     }
 
     a.current {
-      transform: scale(1.4);/////////////
-      @include underly(#fff);///////////////
+      transform: scale(1.4);
+      @include underly(#fff);
     }
   }
   .nav-link {
@@ -134,8 +134,8 @@
     color: #fff;
     transition: all 0.6s cubic-bezier(0.25, 1, 0.2, 1);
     &:hover {
-      transform: scale(1.2);//////////////
-      @include underly(#fff);////////////
+      transform: scale(1.2);
+      @include underly(#fff);
     }
   }
 }
