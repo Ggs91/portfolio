@@ -12,7 +12,8 @@
   cursor: pointer;
   height: 300px; //hard width pour les images de la card
   @include breakpoint(phone-portrait) {
-    height:250px;
+    height:65%;
+    // height:280px;
   }
   &:hover .card-img,
   &:focus .card-img {
@@ -79,6 +80,9 @@
     padding-top: 1rem;
     padding-left: 2rem;
     font-weight: 400;
+    @include breakpoint(phone-portrait) {
+      padding-top: 0.3rem;
+    }
   }
 
   li {

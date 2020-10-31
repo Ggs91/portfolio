@@ -51,6 +51,12 @@ main > section {
   @include breakpoint(very-small-screen) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+
+  &.projects {
+    @include breakpoint(phone-portrait) {
+      grid-auto-rows: 420px;
+    }
+  }
 }
 
 #skills .grid-container-col3 {
