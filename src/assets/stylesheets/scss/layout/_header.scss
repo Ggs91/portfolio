@@ -1,16 +1,20 @@
 header {
   --text: #fff; //Setting custom properties for the header. Then using them in each component (on .btn-line in menu.scss & on #branding a)
   --text-inverse: #000; //Now only adding the nav-inverse classe to one place (the <header>) will change all the other components that uses this custom properties
+  --text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  text-shadow: var(--text-shadow);
   @include breakpoint(tablet-portrait) { // other color if we are on tablet and under (because the header is not transparent)
-  --text: #000;
-  --text-inverse: #fff;
+    --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    --text: #000;
+    --text-inverse: #fff;
   }
+
   position: fixed;
   top:0;
   left:0;
   width:100%;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 2;
+
   @include breakpoint(tablet-portrait) {
     height:4.2rem;
     background-color:#fff;
@@ -19,22 +23,24 @@ header {
 
   @include breakpoint(phone-portrait) {
     height:3.7rem;
-
   }
+
   @include breakpoint(very-small-screen) {
     height:3.3rem;
   }
 }
 
-.inverse { //apply the styles only if tablet size in order to not apply those rules again because it's already set like this
+.inverse { // Here we switch variables values. Inverse class apply only if tablet size and up
   @media only screen and (min-width: 960px) {
     --text: #000;
     --text-inverse: #fff;
+    --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 }
 
  // Branding
 #branding {
+  transition: background 0.5s ease-out;
   font-size: 1.6rem;
   line-height: 1.4;
   font-weight: 600;
@@ -45,6 +51,7 @@ header {
   padding:0;
   margin:0;
   a {
+    transition: color 0.5s ease-out;
     border: none;
     color: var(--text)
   }

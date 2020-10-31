@@ -22,13 +22,18 @@ module.exports = {
                 tag: 'a',
                 attribute: 'href',
                 type: 'src'
+              },
+              {
+                tag: 'video',
+                attribute: 'src',
+                type: 'src'
               }
             ]
           }
         }
       },
       {
-        test: /\.(png|svg|jpe?g|gif|pdf)$/,
+        test: /\.(mp4|png|svg|jpe?g|gif|pdf)$/,
         use: [
           {
             loader: "file-loader",
@@ -38,7 +43,7 @@ module.exports = {
               }
           },
           {
-            loader: 'image-webpack-loader',
+            loader: 'image-webpack-loader', //trait imgs before the fil-loader handle them
             options: {
               disable: dev,
               // bypassOnDebug: true,

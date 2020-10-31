@@ -1,21 +1,40 @@
+#hero {
+  box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.45);
+  width:100%;
+  height:100vh;
+    background: rgba(0, 0, 0, 0.9);
+  // margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /*Cache le background img qui est plus grde que la section*/
+}
+
+.hero-content {
+  margin-top: -150px;
+}
+
 .guy {
   box-shadow:0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
-  // display: inline-block;
-  object-fit:cover;
-  // width:70vw;
+  // object-fit:cover;
   border-radius: 2px;
   height:40vh;
-  // width: 25vw;
-  margin:100px;
-  // height:30vh;
   @include breakpoint(phone-portrait) {
-    margin:140px;
-    height:30vh;
+    // margin:140px;
+    height:35vh;
   }
 }
 
+.hero-text {
+  // color: #fff;
+  // font-size: 4rem;
+  // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 .hero-bg{
-  background-image: url("../../../assets/images/bg.jpg");
+  background-image: url("../../../assets/images/dust.jpg");
   // background-image: url("../../../assets/images/georges-large.png");
   // background-image: url("../../../assets/images/test2.png");
   background-size: cover;
@@ -24,32 +43,14 @@
   // height:100vh;
   // width: 100vh;
   @include breakpoint(phone-portrait) {
-    background-image: url("../../../assets/images/georges-small.png");
+    // background-image: url("../../../assets/images/georges-small.png");
     border:none;
   }
 }
 
-#projects {
-  background: #f8f8f8;
-}
-
                     // HERO
-#hero {
-  box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.45);
-  width:100%;
-  height:100vh;
-  // margin-bottom: 3rem;
-  display: flex;
-  // align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden; /*Cache le background img qui est plus grde que la section*/
-  // background: rgba(0, 0, 0, 0.1);
-}
 
-#hero h1 {
-  //overide ce que j'ai fais dans config
-}
+
 .hero-bg {
   position:absolute;
   top:0;
@@ -62,20 +63,39 @@
   z-index: -1;
 }
 
-.hero-text {
-  color: #fff;
-  font-size: 4rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
 
 .hero-btn {
-  display: inline-block;
-  margin: 0 auto;
-  color:red;
-  padding: 5rem;
+  // display: inline-block;
+  // margin: 0 auto;
+  // color:red;
+  // padding: 5rem;
 }
 
-// ABOUT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                //PROJECTS
+#projects {
+  background: #f8f8f8;
+}
+                  // ABOUT
 
 .description {
   text-align: center;
