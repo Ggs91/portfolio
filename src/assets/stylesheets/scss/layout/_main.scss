@@ -1,15 +1,15 @@
+                // HERO
 #hero {
   box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.45);
   width:100%;
   height:100vh;
-  // background: #1E1E1E;
-  // background: rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden; /*Cache le background img qui est plus grde que la section*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // background: rgba(0, 0, 0, 0.4); //for overlay
 }
 
 .hero-content {
@@ -31,7 +31,6 @@
     @include breakpoint(phone-portrait) {
       font-size: 1.9rem;
       line-height: 1.2;
-      // margin-bottom: 0;
       margin-top: 3rem;
     }
     @include breakpoint(very-small-screen) {
@@ -43,9 +42,6 @@
 .img-wrapper {
   padding: 0 4rem;
   margin-top: 4rem;
-  // @include breakpoint(tablet-portrait) {
-  //   font-size: 3.5rem;
-  // }
   @include breakpoint(phone-landscape) {
     padding: 0;
   }
@@ -54,18 +50,14 @@
   }
 }
 
-.guy {
-  box-shadow:0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
-  object-fit:cover;
-  // height:40vh;
-
+.profile-picture {
+  display: block;
   width:100%;
   height: 100%;
-  display: block;
+  object-fit:cover;
   border-radius: 2px;
+  box-shadow:0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
   @include breakpoint(phone-portrait) {
-    // margin:140px;
-    // height:30vh;
   }
 }
 
@@ -77,73 +69,13 @@
   left:0;
   width:100%;
   height:100%;
-  // object-fit:cover; /*object-fit dicte le comportement de l'img regardless de sa taille. Là je dis qu'elle cover tjs avec un respect du ration. Ca taille elle est set via top left...*/
-  // display: block;
   background-image: url("../../../assets/images/bg.jpg");
-  // background-image: url("../../../assets/images/georges-large.png");
-  // background-image: url("../../../assets/images/test2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  // height:100vh;
-  // width: 100vh;
   @include breakpoint(phone-portrait) {
-    // background-image: url("../../../assets/images/georges-small.png");
     border:none;
   }
-}
-.hero-prallax-bg2 {
-  position:absolute;
-  z-index: -1;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-image: url("../../../assets/images/georges-large.png");
-  // background-image: url("../../../assets/images/georges-large.png");
-  // background-image: url("../../../assets/images/test2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position:absolute;
-
-
-  @include breakpoint(phone-portrait) {
-    // background-image: url("../../../assets/images/georges-small.png");
-    border:none;
-  }
-}
-
-
-                    // HERO
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                //PROJECTS
-#projects {
-  background: #f8f8f8;
 }
                   // ABOUT
 
@@ -160,6 +92,11 @@
     margin-bottom: 0;
   }
 }
+                    //PROJECTS
+#projects {
+  background: #f8f8f8;
+}
+
                  // EDUCATION & SKILL
 #education {
   background: #f8f8f8;
@@ -198,14 +135,12 @@
 
 #education {
   section:last-child {
+    margin-bottom: 0;
+    p:last-child {
       margin-bottom: 0;
-      p:last-child {
-        margin-bottom: 0;
-      }
     }
-
   }
-
+}
 
 .certification {
   display: inline-block;
