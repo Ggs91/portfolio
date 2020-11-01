@@ -10,13 +10,15 @@ var xScrollPosition;
 var yScrollPosition;
 
 const hero = document.getElementById("hero");
-const heroBG = document.querySelector(".hero-bg");
+const heroParallaxBG = document.querySelector(".hero-prallax-bg");
+// const heroParallaxBG2 = document.querySelector(".hero-prallax-bg2");
 
 function scrollLoop(e) {// requestAnimation frame run this function with 60fps. 60 times per sec setTranslate is called and it update transform3D of the img, and so its position
   xScrollPosition = window.scrollX; //We don't use the scroll event to get the position for perfs reasons, instead we ask for x & y position 60 times per sec
   yScrollPosition = window.scrollY;
   if (isVisible(hero)) { //activate animation only if the hero section appears in the viewport
-    setTranslate(0, yScrollPosition * 0.5, heroBG);
+    setTranslate(0, yScrollPosition * 0.20, heroParallaxBG);
+    // setTranslate(0, yScrollPosition * -0.2, heroParallaxBG2);
   }
   requestAnimationFrame(scrollLoop);
 }

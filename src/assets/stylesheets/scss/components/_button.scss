@@ -3,6 +3,7 @@
   text-align: center;
   cursor: pointer;
 }
+              //PRIMARY
 
 .btn-primary {
   color:$primary-color;
@@ -20,7 +21,7 @@
     background:$primary-color;
   }
 }
-
+              //Rounded
 .btn-rounded {
   position: relative;
   display: inline-block;
@@ -32,6 +33,10 @@
   @include breakpoint(phone-portrait) {
     height: 3rem;
     width: 3rem;
+  }
+  @include breakpoint(very-small-screen) {
+    height: 2.5rem;
+    width: 2.5rem;
   }
 
   i {
@@ -45,7 +50,58 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     @include breakpoint(phone-portrait) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint(very-small-screen) {
       font-size: 1.3rem;
     }
   }
+}
+
+                // btn-slide-up
+
+a.btn-slide-up {
+  margin-top: 20px;
+  border: 2px solid $primary-color;
+  color:$primary-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  @include breakpoint(phone-portrait) {
+    font-size: 15px;
+  }
+  @include breakpoint(very-small-screen) {
+    font-size: 13px;
+  }
+}
+
+a.btn-slide-up span {
+  display: inline-block;
+  padding: 10px 40px;
+  transition: transform 0.4s;
+  @include breakpoint(phone-portrait) {
+    padding: 10px 25px;
+  }
+  @include breakpoint(very-small-screen) {
+    padding: 10px 20px;
+  }
+}
+
+a.btn-slide-up .row2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate3d(0, 100%, 0);
+}
+
+a.btn-slide-up:hover .row1 {
+  transform: translate3d(0, -100%, 0);
+}
+
+a.btn-slide-up:hover .row2 {
+  transform: translate3d(0, 0, 0);
 }
