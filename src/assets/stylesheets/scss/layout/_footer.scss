@@ -102,6 +102,11 @@
   }
 }
 
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
 .copyright {
   text-align: center;
   color: grey;
