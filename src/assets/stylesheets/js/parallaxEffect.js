@@ -21,7 +21,7 @@ function scrollLoop(e) {// requestAnimation frame run this function with 60fps. 
   requestAnimationFrame(scrollLoop);
 }
 
-function setTranslate(xPos, yPos, el){
+function setTranslate(xPos, yPos, el) {
   //setting translate3d optimize performance. It forces the GPU to handle the animation instead of the CPU
   el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
 }
