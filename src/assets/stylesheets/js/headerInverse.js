@@ -1,5 +1,5 @@
 ////////////////////// Observers //////////////////////
-
+//observers to make the logo and button menu (in the header) change color when they intersect with dark sections
 const header = document.querySelector(".primary-header");
 
 // Hero Section Observer

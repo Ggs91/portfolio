@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   function toggleMenu() {
-    if (!showMenu) { //ce qui se passe quand on ouvre le menu
+    if (!showMenu) { //When the menu opens
       menuBtn.classList.add('close');
       menu.classList.add('show');
       menuPanelRight.classList.add('show');
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
       menuPanelLeft.classList.remove('close'); /////
       navItems.forEach(item => item.classList.add('show'));
       buttonLines.forEach(item => item.classList.add('show'));
-      buttonLines.forEach(item => item.classList.remove('close'));
 
       // Set Menu State
       showMenu = true;
@@ -35,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function() {
       menuPanelLeft.classList.remove('show');
       menuPanelLeft.classList.add('close'); /////
       navItems.forEach(item => item.classList.remove('show'));
-      buttonLines.forEach(item => item.classList.remove('show'));
-      buttonLines.forEach(item => item.classList.add('close'));
-
+      setTimeout(function(){ //wait 1s before removing show. show gives multiple animation to the btn-lines. But we want to remove them especially background color to not have a delay for transitioning when we scroll on the site
+        buttonLines.forEach(item => item.classList.remove('show'));
+      }, 1000);
       // Set Menu State
       showMenu = false;
     }

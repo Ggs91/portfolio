@@ -14,7 +14,10 @@
   @include breakpoint(very-small-screen) {
     top: 16px;
   }
-
+  //Rotate Into X with Menu Lines
+  &.close {
+    transform: rotate(180deg);
+  }
   .btn-line {
     @include easeOut;
     width: 28px;
@@ -23,17 +26,7 @@
     background: var(--text);
     box-shadow: var(--text-shadow);
     &.show {
-      background: #fff;
-    }
-    &.close {
-      transition-delay: 1s;
-    }
-  }
-
-  //Rotate Into X with Menu Lines
-  &.close {
-    transform: rotate(180deg);
-    .btn-line {
+      background: #fff; //change btn-lines color to white strict when the menu opens
       //Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate3d(5px, 5px, 0);
