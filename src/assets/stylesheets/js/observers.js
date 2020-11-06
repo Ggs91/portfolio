@@ -1,7 +1,7 @@
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
 const appearOptions = {
-  threshold: 1, //appear only once entierly in the viewport
+  threshold: .6, //appear only once entierly in the viewport
   // rootMargin: "0px 0px -100px 0px"
 };
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
