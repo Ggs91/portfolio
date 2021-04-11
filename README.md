@@ -11,4 +11,6 @@ I've created a parallax effect for the hero section, I used CSS animations for t
 
 I had a lot of fun doing it !
 
+Credit to Andrew Borstein whose [portfolio](https://andrewborstein.com/) inspired me for the project cards.
+
 
