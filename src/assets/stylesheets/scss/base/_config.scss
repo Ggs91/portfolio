@@ -71,3 +71,11 @@ a {
 .text-secondary {
   color: $primary-color;
 }
+
+.list-title {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}

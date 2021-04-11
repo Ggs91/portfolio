@@ -97,8 +97,8 @@
   background: #f8f8f8;
 }
 
- // EDUCATION & SKILL
-#education {
+ // EXPERIENCE & SKILL
+#experience {
   background: #f8f8f8;
   section {
     margin-bottom: 2rem;
@@ -115,7 +115,7 @@
   }
 }
 
-#education,
+#experience,
 .skill {
   ul {
     list-style-type: disc;
@@ -134,19 +134,40 @@
   }
 }
 
-#education {
+#experience {
   section:last-child {
     margin-bottom: 0;
     p:last-child {
       margin-bottom: 0;
     }
   }
+  .content {
+    padding-left: 1rem;
+  }
 }
 
-.certification {
+.job-title {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1rem 0;
   font-weight: 600;
   margin-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.company-name {
+  vertical-align: middle;
+  font-size: 1.3rem;
+}
+
+.company-logo {
+  max-height: 50px;
+  display: block;
+}
+
+.company a {
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  border-bottom: none;
 }
